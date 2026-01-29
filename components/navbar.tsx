@@ -5,10 +5,10 @@ import { Container } from "@/components/ui/container"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const links = [
-    { href: "#", label: "Servicios" },
-    { href: "#", label: "Sobre Mí" },
-    { href: "#", label: "Recursos" },
-    { href: "#", label: "Blog" },
+    { href: "#services", label: "Servicios" },
+    { href: "#about", label: "Sobre Mí" },
+    { href: "#resources", label: "Recursos" },
+    { href: "#insights", label: "Blog" },
 ]
 
 export function Navbar() {

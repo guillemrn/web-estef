@@ -1,7 +1,6 @@
 "use client"
 
 import { Container } from "@/components/ui/container"
-import { motion } from "framer-motion"
 import Link from "next/link"
 import { Instagram, Linkedin, Twitter } from "lucide-react"
 
