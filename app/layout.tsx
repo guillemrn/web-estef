@@ -21,8 +21,31 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "estefanía.mkt | Marketing con alma. Estrategia con datos.",
-  description: "Consultoría Estratégica & Desarrollo Web para emprendedores.",
+  title: "Estefanía García | Consultoría de Marketing & Desarrollo Web",
+  description: "Transformo la visión de emprendedores en negocios digitales rentables. Estrategia con datos, marketing con alma e infraestructura web diseñada para vender.",
+  keywords: ["Consultoría de Marketing", "Desarrollo Web", "Next.js", "Estrategia Digital", "High Ticket"],
+  openGraph: {
+    title: "Estefanía García | Consultoría de Marketing & Desarrollo Web",
+    description: "Transformo la visión de emprendedores en negocios digitales rentables. Estrategia con datos, marketing con alma e infraestructura web diseñada para vender.",
+    url: "https://estefania.mkt",
+    siteName: "Estefanía García",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Estefanía García - Marketing & Web",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Estefanía García | Consultoría de Marketing & Desarrollo Web",
+    description: "Transformo la visión de emprendedores en negocios digitales rentables.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
