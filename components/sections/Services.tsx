@@ -44,10 +44,10 @@ const services = [
 
 export function Services() {
     return (
-        <section id="services" className="bg-brand-light dark:bg-brand-wine py-24 border-t border-brand-wine/10 dark:border-white/10 transition-colors duration-300">
+        <section id="servicios" className="bg-brand-light dark:bg-brand-wine py-12 md:py-24 border-t border-brand-wine/10 dark:border-white/10 transition-colors duration-300">
             <Container>
                 {/* Structural Grid Container */}
-                <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-brand-wine/10 dark:border-white/10">
+                <div className="grid grid-cols-1 md:grid-cols-3 border-t md:border-l border-brand-wine/10 dark:border-white/10">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
@@ -55,13 +55,13 @@ export function Services() {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className={`relative group p-8 md:p-10 border-r border-b border-brand-wine/10 dark:border-white/10 overflow-hidden min-h-[320px] flex flex-col justify-between
+                            className={`relative group p-8 md:p-10 md:border-r border-b border-brand-wine/10 dark:border-white/10 overflow-hidden min-h-[320px] flex flex-col justify-between
                                 ${index >= 3 ? 'md:col-span-1' : ''}
                                 ${index === 3 ? 'md:col-start-1 md:ml-[50%] lg:ml-0' : ''} 
                             `}
                         >
                             {/* Ghost Number */}
-                            <span className="absolute bottom-[-20px] right-[-10px] font-serif text-[10rem] leading-none text-brand-wine/5 dark:text-white/5 pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-4">
+                            <span className="absolute bottom-[-20px] right-[-10px] font-serif text-[8rem] md:text-[10rem] leading-none text-brand-wine/5 dark:text-white/5 pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-4">
                                 {service.number}
                             </span>
 

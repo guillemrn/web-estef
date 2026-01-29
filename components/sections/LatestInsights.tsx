@@ -32,7 +32,7 @@ const articles = [
 
 export function LatestInsights() {
     return (
-        <section id="insights" className="bg-brand-light dark:bg-brand-wine py-24 md:py-32 transition-colors duration-500">
+        <section id="blog" className="bg-brand-light dark:bg-brand-wine py-12 md:py-32 transition-colors duration-500">
             <Container>
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 px-2">
@@ -46,7 +46,7 @@ export function LatestInsights() {
                         <span className="text-xs font-bold tracking-[0.3em] text-brand-gold uppercase">
                             El Blog
                         </span>
-                        <h2 className="font-serif text-4xl md:text-5xl text-brand-dark dark:text-brand-light leading-tight max-w-2xl">
+                        <h2 className="font-serif text-3xl md:text-5xl text-brand-dark dark:text-brand-light leading-tight max-w-2xl">
                             Estrategia, código y <span className="italic text-brand-gold">negocios</span>.
                         </h2>
                     </motion.div>

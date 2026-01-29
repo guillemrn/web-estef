@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function About() {
     return (
-        <section id="about" className="bg-brand-light py-24 md:py-32 overflow-hidden transition-colors duration-300">
+        <section id="sobre-mi" className="bg-brand-light py-12 md:py-32 overflow-hidden transition-colors duration-300">
             <Container className="grid gap-16 lg:grid-cols-[0.8fr,1.2fr] items-center">
                 {/* Image Column (35% approx with the grid-cols) */}
                 <motion.div
@@ -43,7 +43,7 @@ export function About() {
                     className="flex flex-col gap-8"
                 >
                     <div className="space-y-6">
-                        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-dark leading-[1.1]">
+                        <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-brand-dark leading-tight">
                             No es solo marketing. Es tu <span className="italic text-brand-gold">historia</span> contada bien.
                         </h2>
 

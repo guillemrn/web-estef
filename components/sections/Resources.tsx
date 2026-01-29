@@ -13,7 +13,7 @@ const shopHighlights = [
 
 export function Resources() {
     return (
-        <section id="resources" className="bg-brand-light dark:bg-brand-wine py-24 md:py-32 transition-colors duration-500 overflow-hidden">
+        <section id="recursos" className="bg-brand-light dark:bg-brand-wine py-12 md:py-32 transition-colors duration-500 overflow-hidden">
             <Container className="grid gap-16 lg:grid-cols-2 items-center">
                 {/* Left Column: Sales Text */}
                 <motion.div
@@ -28,7 +28,7 @@ export function Resources() {
                             Recursos Digitales
                         </span>
 
-                        <h2 className="font-serif text-4xl md:text-5xl text-brand-dark dark:text-brand-light leading-tight">
+                        <h2 className="font-serif text-3xl md:text-5xl text-brand-dark dark:text-brand-light leading-tight">
                             Herramientas para crecer <span className="italic text-brand-gold">sin depender</span> de consultoría 1:1.
                         </h2>
 
@@ -49,7 +49,7 @@ export function Resources() {
                     <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-fit flex items-center gap-3 bg-brand-wine dark:bg-brand-gold text-brand-light dark:text-brand-wine px-8 py-4 rounded-full font-bold tracking-widest uppercase text-xs transition-all duration-300 shadow-xl shadow-brand-wine/10 dark:shadow-brand-gold/10"
+                        className="w-full md:w-fit flex items-center justify-center gap-3 bg-brand-wine dark:bg-brand-gold text-brand-light dark:text-brand-wine px-8 py-4 rounded-full font-bold tracking-widest uppercase text-xs transition-all duration-300 shadow-xl shadow-brand-wine/10 dark:shadow-brand-gold/10"
                     >
                         <ShoppingBag size={18} />
                         <span>Explorar Tienda</span>
@@ -64,7 +64,7 @@ export function Resources() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="relative"
                 >
-                    <div className="relative aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                    <div className="relative aspect-square h-64 md:h-auto md:aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl">
                         {/* Imagen de Stock Editorial (Desk/Planning) */}
                         <Image
                             src="/4.png"
