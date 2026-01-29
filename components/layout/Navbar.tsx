@@ -85,7 +85,9 @@ export function Navbar() {
                         ))}
                         <div className="flex items-center gap-4">
                             <ThemeToggle />
-                            <Button variant="primary">Agendar Consulta</Button>
+                            <Button variant="primary" href="#contacto">
+                                Agendar Consulta
+                            </Button>
                         </div>
                     </nav>
 
@@ -137,7 +139,13 @@ export function Navbar() {
                             {/* CTA en Móvil */}
                             <div className="overflow-hidden pt-8">
                                 <motion.div variants={linkVars}>
-                                    <Button variant="primary" size="lg" className="w-full text-lg">
+                                    <Button
+                                        variant="primary"
+                                        size="lg"
+                                        className="w-full text-lg"
+                                        href="#contacto"
+                                        onClick={() => setIsOpen(false)}
+                                    >
                                         Agendar Consulta
                                     </Button>
                                 </motion.div>

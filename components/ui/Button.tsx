@@ -7,10 +7,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: "sm" | "md" | "lg"
     className?: string
     asMotion?: boolean
+    href?: string
+    target?: string
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className, variant = "primary", size = "md", asMotion = true, ...props }, ref) => {
+    ({ className, variant = "primary", size = "md", asMotion = true, href, target, ...props }, ref) => {
         const baseStyles = "inline-flex items-center justify-center rounded-full font-sans font-bold transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none active:scale-95"
 
         const variants = {
@@ -26,6 +28,22 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         }
 
         const combinedClassName = cn(baseStyles, variants[variant], sizes[size], className)
+
+        if (href) {
+            const Component = asMotion ? motion.a : "a"
+            return (
+                //@ts-ignore
+                <Component
+                    href={href}
+                    target={target}
+                    className={combinedClassName}
+                    {...(asMotion ? { whileHover: { scale: 1.05 }, whileTap: { scale: 0.95 } } : {})}
+                    {...(props as any)}
+                >
+                    {props.children}
+                </Component>
+            )
+        }
 
         if (asMotion) {
             return (
