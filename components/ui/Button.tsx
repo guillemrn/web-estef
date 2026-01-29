@@ -32,13 +32,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         if (href) {
             const Component = asMotion ? motion.a : "a"
             return (
-                //@ts-ignore
                 <Component
                     href={href}
                     target={target}
                     className={combinedClassName}
                     {...(asMotion ? { whileHover: { scale: 1.05 }, whileTap: { scale: 0.95 } } : {})}
-                    {...(props as any)}
+                    {...(props as Record<string, unknown>)}
                 >
                     {props.children}
                 </Component>

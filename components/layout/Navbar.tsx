@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -19,7 +18,6 @@ const navLinks = [
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const pathname = usePathname();
 
     // Bloquear scroll al abrir menú
     useEffect(() => {
@@ -43,7 +41,7 @@ export function Navbar() {
 
     const linkVars = {
         initial: { y: "30vh", opacity: 0 },
-        animate: { y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.37, 0, 0.63, 1] as any } },
+        animate: { y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.37, 0, 0.63, 1] as const } },
         exit: { y: "-30vh", opacity: 0, transition: { duration: 0.3 } },
     };
 

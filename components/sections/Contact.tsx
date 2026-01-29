@@ -3,7 +3,6 @@
 import { Container } from "@/components/ui/container";
 import { motion } from "framer-motion";
 import { MessageCircle, CalendarClock, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export function Contact() {
     return (
@@ -52,7 +51,7 @@ export function Contact() {
                             whileHover={{ y: -5 }}
                             className="flex items-center gap-6 p-8 rounded-3xl bg-brand-wine dark:bg-brand-light shadow-2xl group"
                         >
-                            <div className="w-14 h-14 rounded-2xl bg-white/10 dark:bg-brand-wine/10 flex items-center justify-center text-brand-gold">
+                            <div className="w-14 h-14 rounded-2xl bg-white/10 dark:bg-brand-wine/10 flex items-center justify-center text-brand-light dark:text-brand-wine">
                                 <CalendarClock size={32} />
                             </div>
                             <div className="flex flex-col">
