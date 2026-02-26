@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui/container"
 import Link from "next/link"
-import { Instagram, Linkedin, Twitter } from "lucide-react"
+import { Instagram } from "lucide-react"
 
 const footerLinks = {
     explore: [
