@@ -3,6 +3,7 @@
 import { Container } from "@/components/ui/container"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { Button } from "@/components/ui/Button"
 
 export function Hero() {
     return (
@@ -30,12 +31,12 @@ export function Hero() {
                     </p>
 
                     <div className="mt-4 flex flex-col sm:flex-row gap-4 w-full">
-                        <button className="w-full sm:w-fit rounded-full bg-brand-gold px-8 py-4 font-lato text-base font-bold text-brand-wine transition-transform hover:scale-105 active:scale-95">
+                        <Button variant="primary" size="lg" className="w-full sm:w-fit font-bold">
                             Agendar Consulta
-                        </button>
-                        <button className="w-full sm:w-fit rounded-full border border-brand-dark px-8 py-4 font-lato text-base font-bold text-brand-dark transition-all hover:bg-brand-dark hover:text-brand-light dark:border-brand-champagne dark:text-brand-champagne dark:hover:bg-brand-champagne dark:hover:text-brand-wine active:scale-95">
+                        </Button>
+                        <Button variant="outline" size="lg" className="w-full sm:w-fit font-bold" href="#sobre-mi">
                             Conoce mi historia
-                        </button>
+                        </Button>
                     </div>
                 </motion.div>
 
