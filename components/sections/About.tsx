@@ -22,7 +22,7 @@ export function About() {
 
                         <div className="relative w-full h-full rounded-2xl overflow-hidden border border-brand-dark/10 shadow-xl">
                             <Image
-                                src="/estef-hero.png" // Placeholder, user will provide real image later
+                                src="/about.jpeg" // Placeholder, user will provide real image later
                                 alt="Estefanía - Mentora & Estratega"
                                 fill
                                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -66,7 +66,7 @@ export function About() {
                     {/* Stats Row */}
                     <div className="pt-12 border-t border-brand-dark/10 flex flex-wrap gap-x-12 gap-y-6">
                         <div className="flex flex-col gap-1">
-                            <span className="font-serif text-2xl text-brand-wine font-bold">+5</span>
+                            <span className="font-serif text-2xl text-brand-wine font-bold">+8</span>
                             <span className="font-sans text-xs tracking-widest uppercase text-brand-dark/60">Años de Experiencia</span>
                         </div>
                         <div className="flex flex-col gap-1">
