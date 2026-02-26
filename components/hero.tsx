@@ -31,7 +31,7 @@ export function Hero() {
                     </p>
 
                     <div className="mt-4 flex flex-col sm:flex-row gap-4 w-full">
-                        <Button variant="primary" size="lg" className="w-full sm:w-fit font-bold">
+                        <Button variant="primary" size="lg" className="w-full sm:w-fit font-bold" href="#contacto">
                             Agendar Consulta
                         </Button>
                         <Button variant="outline" size="lg" className="w-full sm:w-fit font-bold" href="#sobre-mi">

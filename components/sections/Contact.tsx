@@ -29,7 +29,7 @@ export function Contact() {
                     <div className="flex flex-col gap-4 max-w-sm">
                         {/* WhatsApp Card */}
                         <motion.a
-                            href="https://wa.me/your-number"
+                            href="https://wa.me/5213317432164?text=Hola%20Estefanía.%20Vi%20tu%20web%20y%20estoy%20listo%2Fa%20para%20escalar%20mi%20negocio.%20Me%20gustar%C3%ADa%20agendar%20una%20consulta%20estrat%C3%A9gica%20contigo."
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ y: -5 }}
@@ -47,7 +47,9 @@ export function Contact() {
 
                         {/* Google Calendar Card */}
                         <motion.a
-                            href="#"
+                            href="https://calendar.app.google/Fr9Y8yLNPop24jhP9"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ y: -5 }}
                             className="flex items-center gap-6 p-8 rounded-3xl bg-brand-wine dark:bg-brand-light shadow-2xl group"
                         >
