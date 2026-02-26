@@ -15,9 +15,9 @@ const footerLinks = {
         { name: "Términos", href: "/terminos" },
     ],
     social: [
-        { name: "Instagram", icon: Instagram, href: "#" },
-        { name: "LinkedIn", icon: Linkedin, href: "#" },
-        { name: "Twitter", icon: Twitter, href: "#" },
+        { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/estefania.mkt" },
+        // { name: "LinkedIn", icon: Linkedin, href: "#" },
+        // { name: "Twitter", icon: Twitter, href: "#" },
     ]
 }
 
@@ -84,6 +84,8 @@ export function Footer() {
                                     <Link
                                         key={social.name}
                                         href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-10 h-10 rounded-full border border-brand-dark/10 dark:border-white/10 flex items-center justify-center text-brand-dark dark:text-white hover:bg-brand-wine dark:hover:bg-brand-gold hover:text-brand-light dark:hover:text-brand-wine transition-all duration-300"
                                         aria-label={social.name}
                                     >

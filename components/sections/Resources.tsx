@@ -63,7 +63,7 @@ export function Resources() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="relative"
                 >
-                    <div className="relative aspect-square h-64 md:h-auto md:aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                    <div className="relative aspect-[4/5] sm:aspect-square md:aspect-[4/3] lg:aspect-square w-full rounded-3xl overflow-hidden shadow-2xl">
                         {/* Imagen de Stock Editorial (Desk/Planning) */}
                         <Image
                             src="/4.png"
