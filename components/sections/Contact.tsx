@@ -135,7 +135,7 @@ export function Contact() {
                                     ¡Gracias por tu mensaje!
                                 </h3>
                                 <p className="font-sans text-lg text-brand-dark/70 dark:text-white/70 max-w-sm">
-                                    Revisaré tu visión y te contactaré en breve.
+                                    Revisaré tu mensaje y te contactaré en breve.
                                 </p>
                             </motion.div>
                         ) : (
