@@ -6,13 +6,13 @@ import { Instagram, Linkedin, Twitter } from "lucide-react"
 
 const footerLinks = {
     explore: [
-        { name: "Servicios", href: "#services" },
-        { name: "Sobre Mí", href: "#about" },
-        { name: "Blog", href: "#insights" },
+        { name: "Servicios", href: "#servicios" },
+        { name: "Sobre Mí", href: "#sobre-mi" },
+        { name: "Blog", href: "#blog" },
     ],
     legal: [
-        { name: "Privacidad", href: "#" },
-        { name: "Términos", href: "#" },
+        { name: "Privacidad", href: "/privacidad" },
+        { name: "Términos", href: "/terminos" },
     ],
     social: [
         { name: "Instagram", icon: Instagram, href: "#" },
