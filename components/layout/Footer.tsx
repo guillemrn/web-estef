@@ -98,7 +98,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-12 pt-8 border-t border-brand-dark/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-sans text-brand-dark/40 dark:text-white/30 tracking-widest uppercase">
                     <p>© {new Date().getFullYear()} Estefanía García. Todos los derechos reservados.</p>
-                    <p>Hecho con amor y código.</p>
+                    <p>Hecho por <a href="https://guillermoml.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-wine dark:hover:text-brand-gold transition-colors">Guillermo</a></p>
                 </div>
             </Container>
         </footer>
