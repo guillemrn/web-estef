@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui/container"
 import { motion } from "framer-motion"
-import { User, Target, Laptop, Share2, Megaphone, ArrowUpRight } from "lucide-react"
+import { User, Target, Laptop, Share2, Megaphone } from "lucide-react"
 
 const services = [
     {
@@ -55,7 +55,7 @@ export function Services() {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className={`relative group p-8 md:p-10 md:border-r border-b border-brand-wine/10 dark:border-white/10 overflow-hidden min-h-[320px] flex flex-col justify-between
+                            className={`relative group p-8 md:p-10 md:border-r border-b border-brand-wine/10 dark:border-white/10 overflow-hidden min-h-[320px] flex flex-col
                                 ${index >= 3 ? 'md:col-span-1' : ''}
                                 ${index === 3 ? 'md:col-start-1 md:ml-[50%] lg:ml-0' : ''} 
                             `}
@@ -83,12 +83,6 @@ export function Services() {
                                 <p className="font-sans text-sm leading-relaxed text-brand-dark/60 dark:text-white/60 max-w-[280px]">
                                     {service.description}
                                 </p>
-                            </div>
-
-                            {/* Cell Footer */}
-                            <div className="mt-8 flex items-center gap-2 text-brand-wine dark:text-brand-gold text-xs font-bold tracking-widest uppercase transition-all duration-300 group-hover:gap-4 cursor-pointer">
-                                <span>Saber más</span>
-                                <ArrowUpRight size={14} />
                             </div>
                         </motion.div>
                     ))}
