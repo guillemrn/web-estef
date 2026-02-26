@@ -24,8 +24,32 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'inherit',
+            a: {
+              color: '#F2D9A0',
+              '&:hover': {
+                color: '#3B010B',
+              },
+            },
+            b: { color: 'inherit' },
+            strong: { color: 'inherit' },
+            em: { color: 'inherit' },
+            h1: { color: 'inherit', fontFamily: 'var(--font-serif)' },
+            h2: { color: 'inherit', fontFamily: 'var(--font-serif)' },
+            h3: { color: 'inherit', fontFamily: 'var(--font-serif)' },
+            h4: { color: 'inherit', fontFamily: 'var(--font-serif)' },
+            code: { color: 'inherit' },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 export default config;

@@ -47,12 +47,11 @@ export function Resources() {
                     </ul>
 
                     <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full md:w-fit flex items-center justify-center gap-3 bg-brand-wine dark:bg-brand-gold text-brand-light dark:text-brand-wine px-8 py-4 rounded-full font-bold tracking-widest uppercase text-xs transition-all duration-300 shadow-xl shadow-brand-wine/10 dark:shadow-brand-gold/10"
+                        disabled
+                        className="w-full md:w-fit flex items-center justify-center gap-3 bg-brand-wine/10 dark:bg-brand-gold/20 text-brand-wine/40 dark:text-brand-wine/50 px-8 py-4 rounded-full font-bold tracking-widest uppercase text-xs transition-all duration-300 cursor-not-allowed border border-brand-wine/10 dark:border-brand-gold/10"
                     >
                         <ShoppingBag size={18} />
-                        <span>Explorar Tienda</span>
+                        <span>Próximamente</span>
                     </motion.button>
                 </motion.div>
 
