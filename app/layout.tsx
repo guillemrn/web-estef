@@ -23,30 +23,54 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Estefanía García | Consultoría de Marketing & Desarrollo Web",
-  description: "Transformo la visión de emprendedores en negocios digitales rentables. Estrategia con datos, marketing con alma e infraestructura web diseñada para vender.",
-  keywords: ["Consultoría de Marketing", "Desarrollo Web", "Next.js", "Estrategia Digital", "High Ticket"],
+  title: {
+    default: "Estefanía MKT | Consultoría Estratégica y Desarrollo Web",
+    template: "%s | Estefanía MKT",
+  },
+  description: "Transformo la visión de emprendedores en negocios digitales rentables. Marketing con alma, estrategia con datos e infraestructura web diseñada para vender.",
+  keywords: [
+    "Consultoría de Marketing",
+    "Desarrollo Web Premium",
+    "Estrategia Digital",
+    "High-Ticket",
+    "Diseño Web",
+    "Estefanía García",
+    "Agencia de Marketing",
+  ],
+  authors: [{ name: "Estefanía García" }],
+  creator: "Estefanía García",
   openGraph: {
-    title: "Estefanía García | Consultoría de Marketing & Desarrollo Web",
-    description: "Transformo la visión de emprendedores en negocios digitales rentables. Estrategia con datos, marketing con alma e infraestructura web diseñada para vender.",
-    url: "https://estefania.mkt",
-    siteName: "Estefanía García",
+    type: "website",
+    locale: "es_MX",
+    url: "https://www.estefaniamkt.com.mx",
+    title: "Estefanía MKT | Consultoría Estratégica y Desarrollo Web",
+    description: "Marketing con alma. Estrategia con datos. Infraestructura web para escalar tu negocio.",
+    siteName: "Estefanía MKT",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Estefanía García - Marketing & Web",
+        alt: "Estefanía MKT - Consultoría Estratégica",
       },
     ],
-    locale: "es_ES",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estefanía García | Consultoría de Marketing & Desarrollo Web",
-    description: "Transformo la visión de emprendedores en negocios digitales rentables.",
-    images: ["/og-image.jpg"],
+    title: "Estefanía MKT | Consultoría Estratégica",
+    description: "Marketing con alma. Estrategia con datos. Infraestructura web para escalar tu negocio.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
