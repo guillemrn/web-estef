@@ -43,7 +43,7 @@ export default function Terminos() {
 
                         <h2 className="font-serif text-2xl text-brand-wine dark:text-brand-gold mt-12 mb-4">3. Prestación de Servicios</h2>
                         <p>
-                            Toda contratación de los servicios de "Consultoría Estratégica" o "Desarrollo Web" se rige por acuerdos y contratos individuales que se elaborarán y firmarán de previo acuerdo entre las partes, estableciendo tiempos, entregables y presupuestos detallados.
+                            Toda contratación de los servicios de &quot;Consultoría Estratégica&quot; o &quot;Desarrollo Web&quot; se rige por acuerdos y contratos individuales que se elaborarán y firmarán de previo acuerdo entre las partes, estableciendo tiempos, entregables y presupuestos detallados.
                         </p>
 
                         <h2 className="font-serif text-2xl text-brand-wine dark:text-brand-gold mt-12 mb-4">4. Enlaces a Terceros</h2>

@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container"
 import Image from "next/image"
 import Link from "next/link"
+import { SanityPost } from "@/types/sanity"
 import { MoveRight } from "lucide-react"
 
 import { client } from "@/sanity/lib/client"
@@ -9,7 +10,7 @@ import { urlForImage } from "@/sanity/lib/image"
 // Option to revalidate page slightly, caching it normally
 export const revalidate = 60
 
-async function getLatestPosts() {
+async function getLatestPosts(): Promise<SanityPost[]> {
     const query = `*[_type == "post"] | order(publishedAt desc)[0...3] {
     _id,
     title,
@@ -17,7 +18,7 @@ async function getLatestPosts() {
     publishedAt,
     excerpt,
     mainImage,
-    author
+    "category": "Estrategia"
   }`
     return client.fetch(query)
 }
@@ -28,20 +29,20 @@ export async function LatestInsights() {
     const fallbackImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
 
     return (
-        <section id="blog" className="bg-brand-light dark:bg-brand-wine py-12 md:py-32 transition-colors duration-500">
+        <section id="insights" className="bg-brand-light dark:bg-brand-wine py-12 md:py-32 transition-colors duration-500 overflow-hidden">
             <Container>
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 px-2">
-                    <div className="space-y-4">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+                    <div className="space-y-6 max-w-2xl">
                         <span className="text-xs font-bold tracking-[0.3em] text-brand-gold uppercase">
-                            El Blog
+                            Insights & Pensamiento
                         </span>
-                        <h2 className="font-serif text-3xl md:text-5xl text-brand-dark dark:text-brand-light leading-tight max-w-2xl">
+                        <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-brand-dark dark:text-brand-light leading-tight">
                             Estrategia, código y <span className="italic text-brand-gold">negocios</span>.
                         </h2>
                     </div>
 
-                    <div>
+                    <div className="flex-shrink-0">
                         <Link
                             href="/blog"
                             className="group flex items-center gap-3 text-brand-wine dark:text-brand-gold font-bold tracking-widest uppercase text-xs"
@@ -55,7 +56,7 @@ export async function LatestInsights() {
                 {/* Grid */}
                 {posts && posts.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                        {posts.map((article: any, index: number) => (
+                        {posts.map((article: SanityPost, index: number) => (
                             <article key={article._id || index}>
                                 <Link href={`/blog/${article.slug?.current || '#'}`} className="group block space-y-6">
                                     {/* Image Wrapper */}

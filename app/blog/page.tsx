@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { client } from "@/sanity/lib/client"
 import { urlForImage } from "@/sanity/lib/image"
+import { SanityPost } from "@/types/sanity"
 
 export const metadata = {
     title: "Blog | Estefanía García",
@@ -13,7 +14,7 @@ export const metadata = {
 
 export const revalidate = 60
 
-async function getAllPosts() {
+async function getAllPosts(): Promise<SanityPost[]> {
     const query = `*[_type == "post"] | order(publishedAt desc) {
     _id,
     title,
@@ -50,7 +51,7 @@ export default async function BlogIndex() {
 
                     {posts && posts.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                            {posts.map((article: any, index: number) => (
+                            {posts.map((article: SanityPost, index: number) => (
                                 <article key={article._id || index}>
                                     <Link href={`/blog/${article.slug?.current || '#'}`} className="group block space-y-6">
                                         {/* Image Wrapper */}

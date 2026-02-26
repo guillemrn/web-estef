@@ -6,10 +6,12 @@ import { client } from "@/sanity/lib/client"
 import { urlForImage } from "@/sanity/lib/image"
 import { PortableText } from "@portabletext/react"
 import { notFound } from "next/navigation"
+import { SanityPost } from "@/types/sanity"
 
 export const revalidate = 60
 
-async function getPost(slug: string) {
+
+async function getPost(slug: string): Promise<SanityPost | null> {
     const query = `*[_type == "post" && slug.current == $slug][0] {
     title,
     mainImage,
@@ -80,7 +82,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                             value={post.body}
                             components={{
                                 types: {
-                                    image: ({ value }: any) => (
+                                    image: ({ value }: { value: { asset: { _ref: string }; alt?: string } }) => (
                                         <div className="relative aspect-video my-12 rounded-2xl overflow-hidden">
                                             <Image
                                                 src={urlForImage(value).url()}
