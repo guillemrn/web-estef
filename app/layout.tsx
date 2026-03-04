@@ -3,7 +3,6 @@ import { Libre_Baskerville, Lato } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Configuración Serif (Para Títulos con clase)
 const libreBaskerville = Libre_Baskerville({
@@ -92,7 +91,6 @@ export default function RootLayout({
         >
           {children}
           <Analytics />
-          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
